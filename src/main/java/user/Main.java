@@ -15,12 +15,12 @@ public class Main {
         jdbi.installPlugin(new SqlObjectPlugin());
 
         User user1 = User.builder()
-                .username("gergomarcellturi")
-                .password("OX3YA0")
-                .name("Turi Gergő Marcell")
-                .email("gergo.marcell.turi@gmail.com")
+                .username("Laj01")
+                .password("jukasbagojtolyás")
+                .name("Nagy Lajos")
+                .email("Laj01@gmail.com")
                 .gender(User.Gender.MALE)
-                .dob(LocalDate.parse("1999-03-16"))
+                .dob(LocalDate.parse("1990-08-18"))
                 .enabled(true)
                 .build();
 
@@ -35,10 +35,10 @@ public class Main {
                 .build();
 
         User user3 = User.builder()
-                .username("username")
-                .password("password")
-                .name("name")
-                .email("email")
+                .username("Márklár")
+                .password("elmaromowsky")
+                .name("Laar Mark")
+                .email("marklaaaar@idontknowwhatimdoing.co.uk.eu.com.tw.gif.exe")
                 .gender(User.Gender.MALE)
                 .dob(LocalDate.parse("1970-01-01"))
                 .enabled(true)
@@ -60,10 +60,10 @@ public class Main {
             dao.list().stream().forEach(System.out::println);
 
             Logger.trace("FIND BY ID");
-            Logger.info(dao.findById(3).get().toString());;
+            Logger.info(dao.findById(3).get().toString());
 
             Logger.trace("FIND BY USERNAME");
-            Logger.info(dao.findByUsername("gergomarcellturi").get().toString());
+            Logger.info(dao.findByUsername("Laj01").get().toString());
 
             Logger.trace("DELETING USER");
             dao.delete(dao.findById(3).get());
@@ -73,20 +73,6 @@ public class Main {
 
         }
 
-//        try (Handle handle = jdbi.open()) {
-//            LegoSetDao dao = handle.attach(LegoSetDao.class);
-//            dao.createTable();
-//            dao.insertLegoSet(new LegoSet("60073", 2015, 233));
-//            dao.insertLegoSet(new LegoSet("75211", 2018, 519));
-//            dao.insertLegoSet(new LegoSet("21034", 2017, 468));
-//            dao.listLegoSets().stream().forEach(System.out::println);
-//        }
-
-
-
-
-
     }
-
 
 }
