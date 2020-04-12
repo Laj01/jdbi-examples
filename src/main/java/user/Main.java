@@ -35,7 +35,7 @@ public class Main {
                 .build();
 
         User user3 = User.builder()
-                .username("Márklár")
+                .username("Márklar")
                 .password("elmaromowsky")
                 .name("Laar Mark")
                 .email("marklaaaar@idontknowwhatimdoing.co.uk.eu.com.tw.gif.exe")
